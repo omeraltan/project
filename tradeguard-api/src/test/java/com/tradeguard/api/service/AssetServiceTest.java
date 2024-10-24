@@ -112,6 +112,7 @@ class AssetServiceTest {
     }
 
     @Test
+    @Description("")
     void testUpdateAsset() {
         Asset asset = new Asset();
         Customer customer = new Customer();
