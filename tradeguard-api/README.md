@@ -169,4 +169,3 @@ swagger yetkiler dahilinde kullanılabilir.
     "status": "PENDING",
     "createDate": "2024-10-24T09:00:18.296396"
     }
-
