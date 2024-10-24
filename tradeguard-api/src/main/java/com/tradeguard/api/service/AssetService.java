@@ -26,10 +26,7 @@ public class AssetService {
     public List<AssetDTO> getAllAssets() {
         List<Asset> assets = assetRepository.findAll();
         List<AssetDTO> assetDTOs = assets.stream().map(AssetMapper::toDto).collect(Collectors.toList());
-
-        // Yeni bir liste oluşturun ve eklemek istediğiniz varlıkları bu listeye ekleyin
         List<AssetDTO> additionalAssets = new ArrayList<>();
-
         assetDTOs.forEach(assetDTO -> {
             Double balance = transactionService.getCustomerBalance(assetDTO.getCustomerId());
             if (balance > 0) {
@@ -40,10 +37,7 @@ public class AssetService {
                 additionalAssets.add(moneyAsset);  // Yeni listeye ekleme yapılıyor
             }
         });
-
-        // Yeni eklenen varlıkları asıl listeye ekleyin
         assetDTOs.addAll(additionalAssets);
-
         return assetDTOs;
     }
 

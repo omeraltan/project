@@ -32,7 +32,7 @@ public class OrderMapper {
 
         Order order = new Order();
         order.setOrderId(orderDto.getOrderId());
-        order.setCustomer(customer); // Customer entity, dışarıdan alınır.
+        order.setCustomer(customer);
         order.setAssetName(orderDto.getAssetName());
         order.setOrderSide(orderDto.getOrderSide() != null ? OrderSide.valueOf(orderDto.getOrderSide()) : null);
         order.setSize(orderDto.getSize());

@@ -13,7 +13,7 @@ public class AssetMapper {
 
         return new AssetDTO(
             asset.getAssetId(),
-            asset.getCustomer() != null ? asset.getCustomer().getCustomerId() : null, // customerId'yi alıyoruz
+            asset.getCustomer() != null ? asset.getCustomer().getCustomerId() : null,
             asset.getAssetName(),
             asset.getSize(),
             asset.getUsableSize()
