@@ -112,7 +112,7 @@ class AssetServiceTest {
     }
 
     @Test
-    @Description("")
+    @Description("Bu test, asset güncelleme işlemini doğrular. Test, önce asset'i veritabanından alarak size ve usableSize boyut değerlerini günceller. Ardından, bu değerlerin güncellenmiş olup olmadığını kontrol eder ve güncellenen asset'in doğru şekilde kaydedildiğini doğrular. Ayrıca, veritabanı işlemlerinin (findById ve save) doğru şekilde çağrıldığı test edilir.")
     void testUpdateAsset() {
         Asset asset = new Asset();
         Customer customer = new Customer();
